@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129143634) do
+ActiveRecord::Schema.define(version: 20171203025538) do
 
   create_table "todo_lists", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "title"
+    t.boolean  "checked",    default: false
   end
 
 end
